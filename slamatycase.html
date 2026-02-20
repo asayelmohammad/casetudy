@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دراسة حالة موقع سلامتي </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #F4F5F7;
+            scroll-behavior: smooth;
+        }
+        .hero-pattern {
+            background-image: radial-gradient(#ffffff 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .browser-shadow {
+            box-shadow: 0 50px 100px -20px rgba(0,0,0,0.15), 0 30px 60px -30px rgba(0,0,0,0.2);
+        }
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -10px rgba(15, 76, 58, 0.1);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #F2A900;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body class="text-gray-900 selection:bg-[#0F4C3A] selection:text-white">
+
+    <!-- 1. Header / Hero -->
+    <header class="w-full h-screen flex flex-col items-center justify-center bg-[#0F4C3A] text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 hero-pattern"></div>
+        <div class="z-10 text-center px-4">
+            <span class="text-[#F2A900] font-bold tracking-widest uppercase text-sm mb-4 block">UX/UI Case Study</span>
+            <h1 class="text-6xl md:text-9xl font-black mb-6 leading-tight">سلامتي</h1>
+            <p class="text-xl md:text-3xl font-light opacity-90 max-w-3xl mx-auto leading-relaxed">
+                slamaty || سلامتي <br>
+                Healthcare Guidance Platform
+            </p>
+            <div class="mt-12 flex justify-center gap-4">
+                <div class="h-1 w-20 bg-[#F2A900] rounded-full"></div>
+                <div class="h-1 w-4 bg-white/20 rounded-full"></div>
+                <div class="h-1 w-4 bg-white/20 rounded-full"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Project Overview -->
+    <section class="py-24 px-8 max-w-7xl mx-auto -mt-32 relative z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 bg-white p-12 rounded-[2.5rem] shadow-2xl mb-16 border border-gray-100">
+            <div class="text-center md:text-right">
+                <h3 class="text-gray-400 text-xs font-bold mb-2 uppercase tracking-wider">الدور</h3>
+                <p class="font-bold text-lg text-[#0F4C3A]">UX/UI Designer</p>
+            </div>
+            <div class="text-center md:text-right">
+                <h3 class="text-gray-400 text-xs font-bold mb-2 uppercase tracking-wider">المدة</h3>
+                <p class="font-bold text-lg text-[#0F4C3A]">4 أسابيع</p>
+            </div>
+            <div class="text-center md:text-right">
+                <h3 class="text-gray-400 text-xs font-bold mb-2 uppercase tracking-wider">الأدوات</h3>
+                <p class="font-bold text-lg text-[#0F4C3A]">Figma, FigJam</p>
+            </div>
+            <div class="text-center md:text-right">
+                <h3 class="text-gray-400 text-xs font-bold mb-2 uppercase tracking-wider">المنصة</h3>
+                <p class="font-bold text-lg text-[#0F4C3A]">Web & Mobile</p>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-black mb-10 text-[#0F4C3A] section-title">فكرة المشروع (Project Overview)</h2>
+                <!--<p class="text-xl text-gray-600 leading-relaxed mb-6">
+                    موقع إلكتروني إرشادي يهدف إلى مساعدة الزوار والمعتمرين والحجاج في الوصول إلى أفضل المستشفيات الخاصة واختيار أفضل الأطباء حسب نوع العملية والتخصص الطبي.
+                </p>-->
+                <div class="bg-[#F8F9FA] p-8 rounded-3xl border-r-4 border-[#0F4C3A] mb-6">
+                    <p class="text-lg text-gray-700 leading-relaxed">
+                        يواجه الزوار والمعتمرون والحجاج صعوبة في الوصول إلى المستشفيات المناسبة بسبب عدم معرفتهم بمواقع المستشفيات، وعدم القدرة على التمييز بين المستشفيات الحكومية والخاصة، بالإضافة إلى حاجز اللغة. كما يعاني بعض المستخدمين من صعوبة اختيار المستشفى والطبيب الأنسب لإجراء العمليات الطبية حسب التخصص المطلوب، وذلك لعدم وجود منصة موحدة توفر معلومات واضحة وسهلة الاستخدام.
+                    </p>
+                </div>
+            </div>
+            <div class="bg-[#0F4C3A] p-12 rounded-[3rem] text-white shadow-xl relative overflow-hidden">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-white/5 rounded-full"></div>
+                <h3 class="text-2xl font-bold mb-6 text-[#F2A900]">المهمة</h3>
+                <p class="text-lg opacity-80 leading-relaxed">
+                    تطوير واجهة مستخدم بديهية تدعم لغات متعددة وتوفر معلومات دقيقة عن المراكز الصحية، مما يقلل من وقت البحث ويزيد من كفاءة الرعاية الصحية المقدمة لضيوف الرحمن في مكة والمدينة.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Problem Statement & Solutions -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black text-[#0F4C3A] mb-4 section-title">تحديد المشكلات والحلول</h2>
+                <p class="text-xl text-gray-500 mt-4">تحليل التحديات التي تواجه الحجاج وتقديم حلول تقنية مبتكرة.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Prob 1 -->
+                <div class="bg-[#F8F9FA] p-8 rounded-[2rem] border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#0F4C3A] group-hover:text-white transition-colors">
+                        <span class="text-2xl">🔍</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-4 text-[#0F4C3A]">عدم معرفة التخصصات</h3>
+                    <p class="text-sm text-gray-500 mb-6 leading-relaxed">عدم معرفة التخصصات المتوفرة في كل مستشفى مما يسبب ضياع الوقت في البحث الميداني.</p>
+                    <div class="pt-4 border-t border-gray-200">
+                        <p class="text-xs font-bold text-[#F2A900] mb-1">💡 الحل:</p>
+                        <p class="text-xs text-gray-600">فلترة المستشفيات حسب التخصص، الطوارئ، والعيادات المتاحة.</p>
+                    </div>
+                </div>
+                <!-- Prob 2 -->
+                <div class="bg-[#F8F9FA] p-8 rounded-[2rem] border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#0F4C3A] group-hover:text-white transition-colors">
+                        <span class="text-2xl">📍</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-4 text-[#0F4C3A]">صعوبة تحديد الموقع</h3>
+                    <p class="text-sm text-gray-500 mb-6 leading-relaxed">عدم معرفة مواقع المستشفيات القريبة من مكان إقامة الحاج أو المشاعر المقدسة.</p>
+                    <div class="pt-4 border-t border-gray-200">
+                        <p class="text-xs font-bold text-[#F2A900] mb-1">💡 الحل:</p>
+                        <p class="text-xs text-gray-600">موقع يحدد أقرب مستشفى حسب الموقع الجغرافي الحالي بدقة.</p>
+                    </div>
+                </div>
+                <!-- Prob 3 -->
+                <div class="bg-[#F8F9FA] p-8 rounded-[2rem] border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#0F4C3A] group-hover:text-white transition-colors">
+                        <span class="text-2xl">⚖️</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-4 text-[#0F4C3A]">التمييز بين المستشفيات</h3>
+                    <p class="text-sm text-gray-500 mb-6 leading-relaxed">عدم التمييز بين المستشفيات الحكومية والخاصة ونوع التغطية التأمينية المطلوبة.</p>
+                    <div class="pt-4 border-t border-gray-200">
+                        <p class="text-xs font-bold text-[#F2A900] mb-1">💡 الحل:</p>
+                        <p class="text-xs text-gray-600">عرض نوع المستشفى بوضوح مع شرح مبسط للخدمات والتكاليف.</p>
+                    </div>
+                </div>
+                <!-- Prob 4 -->
+                <div class="bg-[#F8F9FA] p-8 rounded-[2rem] border border-gray-100 hover:shadow-xl transition-all group">
+                    <div class="w-14 h-14 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-[#0F4C3A] group-hover:text-white transition-colors">
+                        <span class="text-2xl">👨‍⚕️</span>
+                    </div>
+                    <h3 class="font-bold text-lg mb-4 text-[#0F4C3A]">اختيار الطبيب</h3>
+                    <p class="text-sm text-gray-500 mb-6 leading-relaxed">صعوبة اختيار المستشفى والطبيب المناسب لإجراء العمليات الجراحية المجدولة.</p>
+                    <div class="pt-4 border-t border-gray-200">
+                        <p class="text-xs font-bold text-[#F2A900] mb-1">💡 الحل:</p>
+                        <p class="text-xs text-gray-600">مقارنة المستشفيات وعرض خبرات الأطباء وتخصصات العمليات.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Objectives -->
+    <section class="py-24 px-8 max-w-7xl mx-auto">
+        <h2 class="text-4xl font-black mb-16 text-center text-[#0F4C3A] section-title">أهداف المشروع (Objectives)</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-50 flex items-start gap-4">
+                <div class="w-8 h-8 bg-green-100 text-[#0F4C3A] rounded-full flex items-center justify-center flex-shrink-0 mt-1">✓</div>
+                <p class="font-medium text-gray-700">مساعدة الزوار على العثور على أقرب مستشفى بسهولة.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-50 flex items-start gap-4">
+                <div class="w-8 h-8 bg-green-100 text-[#0F4C3A] rounded-full flex items-center justify-center flex-shrink-0 mt-1">✓</div>
+                <p class="font-medium text-gray-700">توضيح نوع المستشفى (حكومي / خاص).</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-50 flex items-start gap-4">
+                <div class="w-8 h-8 bg-green-100 text-[#0F4C3A] rounded-full flex items-center justify-center flex-shrink-0 mt-1">✓</div>
+                <p class="font-medium text-gray-700">توفير الموقع بعدة لغات لتجاوز حاجز اللغة.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-50 flex items-start gap-4">
+                <div class="w-8 h-8 bg-green-100 text-[#0F4C3A] rounded-full flex items-center justify-center flex-shrink-0 mt-1">✓</div>
+                <p class="font-medium text-gray-700">تمكين المستخدم من البحث عن مستشفيات حسب التخصص.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-50 flex items-start gap-4">
+                <div class="w-8 h-8 bg-green-100 text-[#0F4C3A] rounded-full flex items-center justify-center flex-shrink-0 mt-1">✓</div>
+                <p class="font-medium text-gray-700">مساعدة المستخدم في اختيار أفضل طبيب للعملية المطلوبة.</p>
+            </div>
+            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-50 flex items-start gap-4">
+                <div class="w-8 h-8 bg-green-100 text-[#0F4C3A] rounded-full flex items-center justify-center flex-shrink-0 mt-1">✓</div>
+                <p class="font-medium text-gray-700">تقديم معلومات طبية موثوقة وبواجهة سهلة الاستخدام.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Target Audience -->
+    <section class="py-24 bg-[#0F4C3A] text-white">
+        <div class="max-w-7xl mx-auto px-8 text-center">
+            <h2 class="text-4xl font-black mb-16">الفئة المستهدفة (Target Audience)</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div>
+                    <div class="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-white/20 text-4xl">👤</div>
+                    <h3 class="text-2xl font-bold">الزوار</h3>
+                </div>
+                <div>
+                    <div class="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-white/20 text-4xl">🕋</div>
+                    <h3 class="text-2xl font-bold">المعتمرون</h3>
+                </div>
+                <div>
+                    <div class="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-6 border border-white/20 text-4xl">🚶‍♂️</div>
+                    <h3 class="text-2xl font-bold">الحجاج</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Site Services -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-4xl font-black mb-16 text-center text-[#0F4C3A] section-title">خدمات الموقع (Site Services)</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 bg-[#F8F9FA] rounded-3xl border border-gray-100 text-center hover:bg-[#0F4C3A] hover:text-white transition-all group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📍</div>
+                    <h3 class="font-bold text-lg mb-2">تحديد أقرب مستشفى</h3>
+                    <p class="text-sm opacity-70">خدمة تحديد الموقع الجغرافي للوصول السريع للمراكز الصحية.</p>
+                </div>
+                <div class="p-8 bg-[#F8F9FA] rounded-3xl border border-gray-100 text-center hover:bg-[#0F4C3A] hover:text-white transition-all group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">📄</div>
+                    <h3 class="font-bold text-lg mb-2">تفاصيل المستشفى</h3>
+                    <p class="text-sm opacity-70">عرض شامل لبيانات المستشفى، التخصصات، وساعات العمل.</p>
+                </div>
+                <div class="p-8 bg-[#F8F9FA] rounded-3xl border border-gray-100 text-center hover:bg-[#0F4C3A] hover:text-white transition-all group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">🌐</div>
+                    <h3 class="font-bold text-lg mb-2">دعم اللغات</h3>
+                    <p class="text-sm opacity-70">واجهة متعددة اللغات لخدمة ضيوف الرحمن من جميع الجنسيات.</p>
+                </div>
+                <div class="p-8 bg-[#F8F9FA] rounded-3xl border border-gray-100 text-center hover:bg-[#0F4C3A] hover:text-white transition-all group">
+                    <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">✂️</div>
+                    <h3 class="font-bold text-lg mb-2">خدمة العمليات</h3>
+                    <p class="text-sm opacity-70">تسهيل اختيار الطبيب والمستشفى المناسب للعمليات الجراحية.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. SDLC Timeline -->
+    <section class="py-24 bg-[#F4F5F7]">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-4xl font-black mb-16 text-center text-[#0F4C3A] section-title">الخطة الزمنية للمشروع (SDLC)</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 step-card transition-all">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="w-10 h-10 bg-[#0F4C3A] text-white rounded-full flex items-center justify-center font-bold shadow-lg">1</span>
+                        <span class="text-xs font-bold text-[#F2A900] bg-[#F2A900]/10 px-3 py-1 rounded-full">25 نوفمبر</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-[#0F4C3A]">اختيار وتعريف المشروع</h3>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• فكره المشروع</li>
+                        <li>• تحديد المشكله</li>
+                        <li>• الفئة المستهدفه</li>
+                    </ul>
+                </div>
+                <!-- Step 2 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 step-card transition-all">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="w-10 h-10 bg-[#0F4C3A] text-white rounded-full flex items-center justify-center font-bold shadow-lg">2</span>
+                        <span class="text-xs font-bold text-[#F2A900] bg-[#F2A900]/10 px-3 py-1 rounded-full">2 ديسمبر</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-[#0F4C3A]">تخطيط وبدء المشروع</h3>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• اهداف المشروع</li>
+                        <li>• الجدول الزمني</li>
+                        <li>• الموارد (أدوات - لغات - أشخاص)</li>
+                    </ul>
+                </div>
+                <!-- Step 3 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 step-card transition-all">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="w-10 h-10 bg-[#0F4C3A] text-white rounded-full flex items-center justify-center font-bold shadow-lg">3</span>
+                        <span class="text-xs font-bold text-[#F2A900] bg-[#F2A900]/10 px-3 py-1 rounded-full">3 ديسمبر</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-[#0F4C3A]">التحليل</h3>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• جمع المتطلبات (الاستبيانات - المقابلات)</li>
+                        <li>• تحليل المتطلبات (وظيفيه - غير وظيفيه)</li>
+                    </ul>
+                </div>
+                <!-- Step 4 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 step-card transition-all">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="w-10 h-10 bg-[#0F4C3A] text-white rounded-full flex items-center justify-center font-bold shadow-lg">4</span>
+                        <span class="text-xs font-bold text-[#F2A900] bg-[#F2A900]/10 px-3 py-1 rounded-full">10-13 ديسمبر</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-[#0F4C3A]">التصميم المنطقي</h3>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Flow chart diagram</li>
+                        <li>• Use Case Diagram</li>
+                    </ul>
+                </div>
+                <!-- Step 5 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 step-card transition-all">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="w-10 h-10 bg-[#0F4C3A] text-white rounded-full flex items-center justify-center font-bold shadow-lg">5</span>
+                        <span class="text-xs font-bold text-[#F2A900] bg-[#F2A900]/10 px-3 py-1 rounded-full">15-20 ديسمبر</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-[#0F4C3A]">التصميم المادي</h3>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• تصميم الواجهات (Interface Design)</li>
+                        <li>• اختيار قاعده البيانات</li>
+                        <li>• تحديد لغات البرمجه</li>
+                    </ul>
+                </div>
+                <!-- Step 6 & 7 -->
+                <div class="bg-white p-8 rounded-[2rem] shadow-sm border border-gray-100 step-card transition-all">
+                    <div class="flex justify-between items-center mb-6">
+                        <span class="w-10 h-10 bg-[#0F4C3A] text-white rounded-full flex items-center justify-center font-bold shadow-lg">6+7</span>
+                        <span class="text-xs font-bold text-[#F2A900] bg-[#F2A900]/10 px-3 py-1 rounded-full">15-20 ديسمبر</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-[#0F4C3A]">التطبيق والصيانة</h3>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• كتابه الأكواد والاتصال بالقاعده</li>
+                        <li>• إصلاح الأخطاء وتحديث النظام</li>
+                        <li>• أضافه ميزات جديده</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Requirements -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-4xl font-black mb-16 text-center text-[#0F4C3A] section-title">المتطلبات التقنية (Requirements)</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Functional -->
+                <div class="bg-[#F8F9FA] p-10 rounded-[2.5rem] border border-gray-100 shadow-sm">
+                    <h3 class="text-xl font-bold mb-8 text-[#0F4C3A] border-b border-gray-200 pb-4">المتطلبات الوظيفية</h3>
+                    <ul class="space-y-4 text-sm text-gray-600 list-decimal pr-4">
+                        <li>يجب أن يسمح النظام للمستخدم بالبحث عن أقرب مستشفى.</li>
+                        <li>يجب أن يعرض النظام نوع المستشفى (حكومي / خاص).</li>
+                        <li>يجب أن يدعم النظام أكثر من لغة.</li>
+                        <li>يجب أن يسمح النظام بالبحث عن مستشفيات حسب التخصص.</li>
+                        <li>يجب أن يسمح النظام باختيار نوع العملية.</li>
+                        <li>يجب أن يعرض معلومات الطبيب (الاسم – التخصص – الخبرة).</li>
+                    </ul>
+                </div>
+                <!-- Non-Functional -->
+                <div class="bg-[#F8F9FA] p-10 rounded-[2.5rem] border border-gray-100 shadow-sm">
+                    <h3 class="text-xl font-bold mb-8 text-[#0F4C3A] border-b border-gray-200 pb-4">المتطلبات غير الوظيفية</h3>
+                    <ul class="space-y-4 text-sm text-gray-600 list-decimal pr-4">
+                        <li>يجب أن يكون الموقع سهل الاستخدام.</li>
+                        <li>يجب أن يدعم الموقع أكثر من لغة.</li>
+                        <li>يجب أن يكون الموقع سريع الاستجابة.</li>
+                        <li>يجب أن يعمل الموقع على مختلف المتصفحات.</li>
+                        <li>يجب أن يحمي النظام بيانات المستخدم.</li>
+                        <li>يجب أن يكون الموقع قابلًا للتوسع مستقبلاً.</li>
+                    </ul>
+                </div>
+                <!-- Admin -->
+                <div class="bg-[#F8F9FA] p-10 rounded-[2.5rem] border border-gray-100 shadow-sm">
+                    <h3 class="text-xl font-bold mb-8 text-[#0F4C3A] border-b border-gray-200 pb-4">متطلبات المدير (Admin)</h3>
+                    <ul class="space-y-4 text-sm text-gray-600 list-decimal pr-4">
+                        <li>يجب أن يسمح النظام للمدير بإضافة مستشفيات.</li>
+                        <li>يجب أن يسمح النظام بتعديل بيانات المستشفيات.</li>
+                        <li>يجب أن يسمح النظام بإضافة أطباء وربطهم بالعمليات.</li>
+                        <li>يجب أن يسمح النظام بتحديث التخصصات.</li>
+                        <li>يجب أن يوفر النظام لوحة تحكم للمدير.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Survey Results -->
+    <section class="py-24 bg-[#F4F5F7]">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-black text-[#0F4C3A] mb-4 section-title">نتائج الاستبيان (Survey Results)</h2>
+                <p class="text-xl text-gray-500 mt-4">تحليل البيانات المجمعة من الفئة المستهدفة لضمان تلبية احتياجاتهم.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="bg-white p-10 rounded-[2rem] text-center shadow-md border border-gray-50">
+                    <div class="text-6xl font-black text-[#F2A900] mb-6">78%</div>
+                    <p class="text-gray-600 font-bold">واجهوا صعوبة في العثور على مركز صحي قريب خلال فترات الزحام.</p>
+                </div>
+                <div class="bg-white p-10 rounded-[2rem] text-center shadow-md border border-gray-50">
+                    <div class="text-6xl font-black text-[#F2A900] mb-6">85%</div>
+                    <p class="text-gray-600 font-bold">يفضلون استخدام الاستشارات الطبية عن بعد للحالات غير الطارئة.</p>
+                </div>
+                <div class="bg-white p-10 rounded-[2rem] text-center shadow-md border border-gray-50">
+                    <div class="text-6xl font-black text-[#F2A900] mb-6">60%</div>
+                    <p class="text-gray-600 font-bold">أشاروا إلى أن حاجز اللغة كان عائقاً أساسياً في التواصل مع الأطباء.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Design System -->
+    <section class="py-24 bg-[#0F4C3A] text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-5 hero-pattern"></div>
+        <div class="max-w-7xl mx-auto px-8 relative z-10">
+            <h2 class="text-4xl font-black mb-20 text-center section-title">نظام التصميم (Design System)</h2>
+            <div class="grid md:grid-cols-2 gap-20">
+                <!-- Colors -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-10 text-[#F2A900] flex items-center gap-4">الألوان (Colors)</h3>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="space-y-3">
+                            <div class="w-full h-32 bg-[#0F4C3A] rounded-3xl border border-white/10 shadow-xl"></div>
+                            <p class="font-bold">Primary Dark (#0F4C3A)</p>
+                            <p class="text-xs opacity-60">اللون الأساسي للهوية، يرمز للثقة والهدوء.</p>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="w-full h-32 bg-[#F2A900] rounded-3xl border border-white/10 shadow-xl"></div>
+                            <p class="font-bold">Accent Gold (#F2A900)</p>
+                            <p class="text-xs opacity-60">لون التأكيد، يرمز للفخامة والتميز.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Typography -->
+                <div>
+                    <h3 class="text-2xl font-bold mb-10 text-[#F2A900]">الخطوط (Typography)</h3>
+                    <div class="bg-white/5 p-10 rounded-[2.5rem] border border-white/10 backdrop-blur-sm">
+                        <div class="text-7xl font-black mb-6">Cairo</div>
+                        <p class="text-xl opacity-70 mb-10 leading-relaxed">خط عربي عصري يتميز بالوضوح التام والجمالية في الواجهات الرقمية الطبية.</p>
+                        <div class="space-y-4">
+                            <div class="text-3xl font-black border-b border-white/10 pb-2">Bold 900 - العناوين</div>
+                            <div class="text-2xl font-bold border-b border-white/10 pb-2">SemiBold 700 - العناوين الفرعية</div>
+                            <div class="text-xl font-medium">Medium 500 - النصوص</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 11. Logical Design Diagrams -->
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-4xl font-black mb-16 text-center text-[#0F4C3A] section-title">التصميم المنطقي (Logical Design)</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-[#F8F9FA] p-10 rounded-[2.5rem] border border-gray-100 shadow-sm">
+                    <h3 class="text-xl font-bold mb-6 text-[#0F4C3A]">Flowchart Diagram</h3>
+                    <div class="aspect-video bg-gray-200 rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400">
+                        [مخطط تدفق البيانات - Flowchart]
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500">يوضح مسار المستخدم من الدخول للمنصة وحتى الوصول للخدمة الطبية.</p>
+                </div>
+                <div class="bg-[#F8F9FA] p-10 rounded-[2.5rem] border border-gray-100 shadow-sm">
+                    <h3 class="text-xl font-bold mb-6 text-[#0F4C3A]">Use Case Diagram</h3>
+                    <div class="aspect-video bg-gray-200 rounded-2xl border-2 border-dashed border-gray-300 flex items-center justify-center text-gray-400">
+                        [مخطط حالات الاستخدام - Use Case]
+                    </div>
+                    <p class="mt-4 text-sm text-gray-500">يوضح التفاعلات بين الحاج، المدير، والنظام التقني.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 12. Wireframes -->
+    <section class="py-24 bg-[#F4F5F7]">
+        <div class="max-w-7xl mx-auto px-8">
+            <h2 class="text-4xl font-black mb-16 text-center text-[#0F4C3A] section-title">التخطيط المبدئي (Wireframes)</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="aspect-[9/16] bg-white border-2 border-dashed border-gray-300 rounded-[2.5rem] p-10 opacity-50 hover:opacity-100 transition-opacity">
+                    <div class="w-full h-12 bg-gray-200 rounded-2xl mb-6"></div>
+                    <div class="w-full h-40 bg-gray-200 rounded-3xl mb-6"></div>
+                    <div class="w-3/4 h-4 bg-gray-200 rounded-full mb-3"></div>
+                    <div class="w-1/2 h-4 bg-gray-200 rounded-full"></div>
+                    <div class="grid grid-cols-2 gap-4 mt-auto"><div class="h-20 bg-gray-200 rounded-xl"></div><div class="h-20 bg-gray-200 rounded-xl"></div></div>
+                </div>
+                <div class="aspect-[9/16] bg-white border-2 border-dashed border-gray-300 rounded-[2.5rem] p-10 opacity-50 hover:opacity-100 transition-opacity">
+                    <div class="w-full h-12 bg-gray-200 rounded-2xl mb-6"></div>
+                    <div class="w-full h-64 bg-gray-200 rounded-3xl mb-6"></div>
+                    <div class="w-full h-12 bg-gray-200 rounded-2xl"></div>
+                    <div class="w-full h-4 bg-gray-200 rounded-full mt-4"></div>
+                </div>
+                <div class="aspect-[9/16] bg-white border-2 border-dashed border-gray-300 rounded-[2.5rem] p-10 opacity-50 hover:opacity-100 transition-opacity">
+                    <div class="w-full h-12 bg-gray-200 rounded-2xl mb-6"></div>
+                    <div class="space-y-4">
+                        <div class="w-full h-20 bg-gray-200 rounded-2xl"></div>
+                        <div class="w-full h-20 bg-gray-200 rounded-2xl"></div>
+                        <div class="w-full h-20 bg-gray-200 rounded-2xl"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 13. Final UI Showcase -->
+    <section class="py-24 bg-white">
+        <div class="max-w-[1400px] mx-auto px-8">
+            <h2 class="text-4xl font-black text-[#0F4C3A] mb-16 text-center section-title">الشاشات النهائية (Final UI)</h2>
+            <div class="browser-shadow bg-white rounded-[3rem] overflow-hidden border border-gray-200">
+                <div class="bg-gray-100 px-8 py-5 flex items-center gap-3 border-b border-gray-200">
+                    <div class="flex gap-2"><div class="w-3 h-3 rounded-full bg-red-400"></div><div class="w-3 h-3 rounded-full bg-yellow-400"></div><div class="w-3 h-3 rounded-full bg-green-400"></div></div>
+                    <div class="bg-white px-6 py-1.5 rounded-full text-xs text-gray-400 font-mono flex-1 text-center max-w-md mx-auto border border-gray-200">hajjcare.com</div>
+                </div>
+                <div class="bg-white min-h-[900px]">
+                    <nav class="flex items-center justify-between px-12 py-8 border-b border-gray-50">
+                        <div class="flex items-center gap-3"><div class="w-10 h-10 bg-[#0F4C3A] rounded-xl flex items-center justify-center text-white font-bold text-xl">+</div><span class="font-black text-2xl text-[#0F4C3A]">HAJJ CARE</span></div>
+                        <div class="hidden md:flex gap-10 text-sm font-bold text-gray-600"><span>الرئيسية</span><span>المستشفيات</span><span>الأطباء</span><span>اتصل بنا</span></div>
+                        <button class="bg-[#0F4C3A] text-white px-8 py-3 rounded-full text-sm font-bold shadow-lg shadow-[#0F4C3A]/20">ابدأ الآن</button>
+                    </nav>
+                    <div class="bg-[#F4F6F5] py-32 px-12 flex flex-col md:flex-row items-center justify-between gap-16">
+                        <div class="max-w-2xl">
+                            <span class="bg-[#E2EAE7] text-[#0F4C3A] px-5 py-2 rounded-full text-xs font-black mb-8 inline-block">رعاية صحية متكاملة</span>
+                            <h2 class="text-7xl font-black text-[#0F4C3A] leading-tight mb-8">رعايتك الصحية<br><span class="text-[#F2A900]">تبدأ من هنا</span></h2>
+                            <p class="text-gray-600 text-xl mb-12">حلول الرعاية الصحية المبتكرة لخدمة ضيوف الرحمن بأعلى معايير الجودة والتميز في مكة والمدينة.</p>
+                            <div class="bg-white p-3 rounded-full shadow-2xl flex items-center border border-gray-100 max-w-xl"><input type="text" placeholder="ابحث عن مستشفى أو تخصص..." class="flex-1 px-8 outline-none"><button class="bg-[#0F4C3A] text-white px-12 py-5 rounded-full font-black text-lg">بحث</button></div>
+                        </div>
+                        <div class="relative"><div class="w-[450px] h-[450px] bg-[#0F4C3A] rounded-[4rem] flex items-center justify-center text-white text-[12rem] font-black shadow-2xl transform rotate-3">+</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-24 bg-[#0F4C3A] text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 hero-pattern"></div>
+        <div class="relative z-10">
+            <h2 class="text-4xl font-black mb-8">شكراً للمشاهدة</h2>
+            <p class="text-xl opacity-50 mb-12 max-w-2xl mx-auto">تم تصميم هذه الحالة الدراسية لتقديم حلول تقنية مبتكرة تخدم ضيوف الرحمن وتسهل رحلتهم الإيمانية بسلام وطمأنينة.</p>
+            <div class="flex justify-center gap-6">
+                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-gray-900 transition-all cursor-pointer">Be</div>
+                <div class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-gray-900 transition-all cursor-pointer">In</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
